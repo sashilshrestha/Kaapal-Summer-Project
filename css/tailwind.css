@@ -10,3 +10,7 @@
 .navbar .items-stretch a {
     @apply ml-4;
 }
+
+.card {
+    @apply hover:shadow-none transition-all duration-300 ease-linear cursor-pointer;
+}

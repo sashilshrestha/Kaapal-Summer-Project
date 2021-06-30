@@ -15,15 +15,15 @@
                         Home
                     </a>
                     <a class="btn btn-ghost btn-sm rounded-btn">
-                        Portfolio
+                        About
                     </a>
                     <a class="btn btn-ghost btn-sm rounded-btn">
-                        About
+                        Services
                     </a>
                     <a class="btn btn-ghost btn-sm rounded-btn">
                         Contact
                     </a>
-                    <a class="btn btn-primary btn-sm rounded-btn">
+                    <a class="btn btn-primary btn-sm rounded-btn" href="#my-modal">
                         Appointment
                     </a>
                 </div>

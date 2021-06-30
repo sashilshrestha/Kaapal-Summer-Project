@@ -4,5 +4,6 @@ a {
 
 .modal-toggle:checked ~ .modal,
 .modal:target {
-  background: #d87f1914;
+  background: #f3f3f314;
+  backdrop-filter: blur(10px);
 }

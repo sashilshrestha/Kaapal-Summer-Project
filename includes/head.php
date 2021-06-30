@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="halloween">
+<html lang="en" data-theme="kaapal-dark">
 
 <head>
     <meta charset="UTF-8">

@@ -58,13 +58,13 @@ if (isset($_POST['submit'])) {
 <section id="whyus">
     <div class="container mx-auto">
         <div class="flex flex-row w-full">
-            <div class="card  p-3">
+            <div class="card p-3">
                 <h5 class="font-bold text-lg mb-3">BEAUTY / MASSAGES / SPA</h5>
                 <h2 class="text-4xl font-bold text-primary mb-6">WHAT DO YOU NEED?</h2>
                 <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
 
             </div>
-            <div class="card p-3">
+            <div class="card p-3 shadow-2xl">
                 <div class="ss-img-holder flex justify-end">
                     <img src="https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80" alt="" class="rounded-full">
                 </div>
@@ -72,7 +72,7 @@ if (isset($_POST['submit'])) {
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
             </div>
 
-            <div class="card p-3">
+            <div class="card p-3 shadow-2xl">
                 <div class="ss-img-holder flex justify-end">
                     <img src="https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80" alt="" class="rounded-full">
                 </div>
@@ -80,7 +80,7 @@ if (isset($_POST['submit'])) {
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
             </div>
 
-            <div class="card p-3">
+            <div class="card p-3 shadow-2xl ">
                 <div class="ss-img-holder flex justify-end">
                     <img src="https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80" alt="" class="rounded-full">
                 </div>
