@@ -1,5 +1,4 @@
 <?php include('./head.php'); ?>
-
 <!-- Navbar -->
 <header>
     <div class="navbar mb-2 text-neutral-content ">
@@ -14,7 +13,7 @@
                     <a class="btn btn-ghost btn-sm rounded-btn">
                         Home
                     </a>
-                    <a class="btn btn-ghost btn-sm rounded-btn">
+                    <a class="btn btn-ghost btn-sm rounded-btn" href="./about.php">
                         About
                     </a>
                     <a class="btn btn-ghost btn-sm rounded-btn">
