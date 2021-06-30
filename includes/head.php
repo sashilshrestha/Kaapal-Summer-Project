@@ -8,6 +8,7 @@
     <title>Kaapal</title>
 
     <!-- Tailwind Css Main File -->
+    <link rel="stylesheet" href="./css/main-custom.css" />
     <link rel="stylesheet" href="./css/main.css" />
 
 </head>

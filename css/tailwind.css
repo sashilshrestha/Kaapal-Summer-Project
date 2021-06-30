@@ -2,3 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+    @apply rounded-full;
+}
+
+.navbar .items-stretch a {
+    @apply ml-4;
+}
