@@ -1,5 +1,45 @@
+@media screen and (max-width: 1855px) {
+    :root {
+        font-size: 13.333px;
+    }
+}
 @media screen and (max-width: 1600px) {
-    // .container {
-    //     width: 85% !important;
-    // }
+    :root {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 1440px) {
+    :root {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .uk-container-large {
+        width: 74%;
+    }
+}
+
+@media screen and (max-width: 1155px) {
+    :root {
+        font-size: 8.6px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 992px) {
+    :root {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 767px) {
+    :root {
+        font-size: 12.4px;
+    }
+}
+@media screen and (max-width: 400px) {
+    :root {
+        font-size: 8.5px;
+    }
 }

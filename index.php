@@ -32,80 +32,154 @@ if (isset($_POST['submit'])) {
 
 
 <!-- Hero Section -->
-<section class="text-gray-100 body-font">
-    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-        <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-100">Before they sold out
-                <br class="hidden lg:inline-block">readymade gluten
-            </h1>
-            <p class="mb-8 leading-relaxed text-gray-400">Copper mug try-hard pitchfork pour-over freegan heirloom
-                neutra
-                air
-                plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken
-                authentic tumeric truffaut hexagon try-hard chambray.</p>
-            <div class="flex justify-center">
-                <button class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Button</button>
-                <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+<section id="hero">
+    <div class="hero" style="background-image: url(&quot;https://images.unsplash.com/photo-1560066984-138dadb4c035?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80&quot;);">
+        <div class="hero-overlay"></div>
+        <div class="hero-overlay part-2"></div>
+        <div class="hero-info container mx-auto">
+            <div class="ss-information">
+                <h5 class="font-light">
+                    ENJOY THE SOOTHING EXPERIENCE!
+                </h5>
+                <h1 class="font-bold mb-6">ESSENCE OF NATURAL <span class="text-primary">BEAUTY</span></h1>
+
+                <a class="btn btn-primary rounded-btn text-base px-6 mr-2">
+                    Explore More
+                </a>
+
+                <a class="btn btn-gray rounded-btn text-base px-6 btn-outline" href="#my-modal">
+                    Book an apooinment
+                </a>
             </div>
-        </div>
-        <div class="lg:w-full md:w-1/2 w-5/6 lg:max-w-xl">
-            <img class="object-cover object-center rounded" alt="hero" src="./img/hero-img.jfif">
         </div>
     </div>
 </section>
 
-<!-- CTA Section -->
-<section class="text-gray-100 body-font">
-    <div class="container px-5 py-24 mx-auto flex">
-        <div class="lg:w-2/5 md:w-1/2 rounded-lg p-10 flex flex-col  w-full mt-10 md:mt-0 mr-20" style="background:#232323">
-            <h2 class="text-gray-200 font-medium title-font mb-5 text-center text-2xl">Make an Appointment</h2>
-            <div class="relative mb-4">
-                <label for="full-name" class="leading-7 text-sm text-gray-100">Full Name</label>
-                <input type="text" id="full-name" name="full-name" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-            </div>
-            <div class="relative mb-4">
-                <label for="email" class="leading-7 text-sm text-gray-100">Email</label>
-                <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-            </div>
-            <div class="relative mb-4">
-                <label for="services" class="leading-7 text-sm text-gray-100">Services</label>
+<section id="whyus">
+    <div class="container mx-auto">
+        <div class="flex flex-row w-full">
+            <div class="card  p-3">
+                <h5 class="font-bold text-lg mb-3">BEAUTY / MASSAGES / SPA</h5>
+                <h2 class="text-4xl font-bold text-primary mb-6">WHAT DO YOU NEED?</h2>
+                <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
 
-                <select name="services" id="cars" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-2 px-2 leading-8 transition-colors duration-200 ease-in-out">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                </select>
+            </div>
+            <div class="card p-3">
+                <div class="ss-img-holder flex justify-end">
+                    <img src="https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80" alt="" class="rounded-full">
+                </div>
+                <h1 class="font-bold text-primary">BEAUTY <span class="font-light text-white">CENTER</span></h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
             </div>
 
-            <div class="relative mb-4">
-                <?php $year =  date('Y');
-                $month =  date('m');
-                $date = date('d'); ?>
-                <label for="date" class="leading-7 text-sm text-gray-100">Date</label>
-                <input type="date" id="start" name="trip-start" value="<?php echo $year ?>-<?php echo $month ?>-<?php echo $date ?>" min="<?php echo $year ?>-<?php echo $month ?>-<?php echo $date ?>" max="" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <div class="card p-3">
+                <div class="ss-img-holder flex justify-end">
+                    <img src="https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80" alt="" class="rounded-full">
+                </div>
+                <h1 class="font-bold text-primary">BEAUTY <span class="font-light text-white">CENTER</span></h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
             </div>
-            <div class="relative mb-4">
-                <label for="time" class="leading-7 text-sm text-gray-100">Time</label>
-                <input type="time" min="3:00" max="6:00" name="time1" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2
-                    focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors
-                    duration-200 ease-in-out" required>
+
+            <div class="card p-3">
+                <div class="ss-img-holder flex justify-end">
+                    <img src="https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80" alt="" class="rounded-full">
+                </div>
+                <h1 class="font-bold text-primary">BEAUTY <span class="font-light text-white">CENTER</span></h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
             </div>
-            <div class="relative mb-5">
-                <label for="phone" class="leading-7 text-sm text-gray-100">Phone</label>
-                <input type="phone" id="phone" name="phone" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-            </div>
-            <button class="text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Button</button>
-            <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
-        </div>
-        <div class="md:pr-16 lg:pr-0 pr-0">
-            <h1 class="title-font font-medium text-3xl text-gray-100">Slow-carb next level shoindcgoitch ethical
-                authentic, poko scenester</h1>
-            <p class="leading-relaxed mt-4">Poke slow-carb mixtape knausgaard, typewriter street art gentrify
-                hammock starladder roathse. Craies vegan tousled etsy austin.</p>
+
         </div>
 
     </div>
 </section>
 
+<section id="services">
+    <div class="mx-auto ss-table">
+        <h5 class="text-center font-light text-lg tracking-widest uppercase">Beauty Services</h5>
+        <h1 class="text-center font-bold text-6xl">Our Services</h1>
+        <div class="overflow-x-auto mt-12 mt-20">
+            <table class="table w-full">
+                <thead>
+                    <tr>
+                        <th>
+                            Sno.
+                        </th>
+                        <th>Service Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $query = mysqli_query($con, "select * from tblservices");
+                    $i = 1;
+                    while ($row = mysqli_fetch_array($query)) {
+                    ?>
+                        <tr>
+                            <th>
+                                #<?php echo $i; ?>
+                            </th>
+                            <td>
+                                <div class="flex items-center space-x-3">
+                                    <div>
+                                        <div class="font-bold">
+                                            <?php echo $row['ServiceName']; ?>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </td>
+
+                            <th>
+                                <p class="inline-block border-white border-b-2">Rs. <?php echo $row['Cost']; ?></p>
+                            </th>
+                        </tr>
+                    <?php
+                        $i++;
+                    }
+                    ?>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>SNO.</th>
+                        <th>Service Name</th>
+                        <th>Price</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+
+    </div>
+</section>
 <?php include('includes/footer.php'); ?>
+
+<!-- Book Appoinment Modal Box -->
+<div id="my-modal" class="modal">
+    <div class="modal-box">
+        <div class="form-control">
+            <h1 class="text-center font-bold mb-5 text-4xl">Book an Appointment</h1>
+            <input type="text" placeholder="Full Name" class="input input-bordered mb-3">
+            <input type="text" placeholder="Email" class="input input-bordered mb-3">
+            <select class="select select-bordered w-full mb-3">
+                <option disabled="disabled" selected="selected">Choose your superpower</option>
+                <option>telekinesis</option>
+                <option>time travel</option>
+                <option>invisibility</option>
+            </select>
+            <?php
+            $year =  date('Y');
+            $month =  date('m');
+            $date = date('d');
+            ?>
+            <input type="date" placeholder="Date" class="input input-bordered mb-3" value="<?php echo $year ?>-<?php echo $month ?>-<?php echo $date ?>" min="<?php echo $year ?>-<?php echo $month ?>-<?php echo $date ?>" max="">
+            <input type="time" placeholder="Time" class="input input-bordered mb-3" value="10:00" min="10:00" max="18:00">
+            <input type="number" placeholder="Phone Number" class="input input-bordered mb-3">
+
+        </div>
+
+        <div class="modal-action">
+            <a href="#" class="btn btn-primary px-8 text-base">Book</a>
+            <a href="#" class="btn btn-ghost btn-outline px-8 text-base">Close</a>
+        </div>
+    </div>
+</div>

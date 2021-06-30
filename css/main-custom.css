@@ -1,7 +1,153 @@
+@media screen and (max-width: 1855px) {
+  :root {
+    font-size: 13.333px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .uk-container-large {
+    width: 74%;
+  }
+}
+
+@media screen and (max-width: 1155px) {
+  :root {
+    font-size: 8.6px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    font-size: 12.4px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  :root {
+    font-size: 8.5px;
+  }
+}
+
 a {
   cursor: pointer;
 }
 
-.logo-img {
+.modal-toggle:checked ~ .modal,
+.modal:target {
+  background: #d87f1914;
+}
+
+header .logo-img {
   height: 4rem;
+}
+
+#hero .hero {
+  height: calc(100vh - 15rem);
+}
+
+#hero .hero .hero-overlay {
+  background: #212121;
+  background: linear-gradient(180deg, #212121 0%, rgba(33, 33, 33, 0.45602) 50%, #212121 100%);
+}
+
+#hero .hero .hero-overlay.part-2 {
+  background: #212121;
+  background: linear-gradient(90deg, #212121 0%, rgba(33, 33, 33, 0.8) 25%, rgba(33, 33, 33, 0) 100%);
+}
+
+#hero .hero .hero-info .ss-information h5 {
+  font-size: 1.8rem;
+  color: #acacac;
+  padding: 0 0.3rem;
+}
+
+#hero .hero .hero-info .ss-information h1 {
+  max-width: 60rem;
+  font-size: 6.75rem;
+  line-height: 100%;
+}
+
+#whyus {
+  padding: 10rem 0;
+}
+
+#whyus .card {
+  width: 100%;
+  padding: 3.5rem 2rem;
+  border-radius: 6rem 6rem 6rem 0rem;
+  margin: 0 1.5rem;
+}
+
+#whyus .card h5 {
+  letter-spacing: 1px;
+}
+
+#whyus .card h2 {
+  line-height: 150%;
+}
+
+#whyus .card p.text-base {
+  font-size: 1.2rem;
+  line-height: 150%;
+}
+
+#whyus .card .ss-img-holder {
+  margin-bottom: 4rem;
+}
+
+#whyus .card .ss-img-holder img {
+  width: 6.5rem;
+  height: 6.5rem;
+  object-fit: cover;
+}
+
+#whyus .card h1 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+#whyus .card:nth-child(n + 2) {
+  background-color: #191818;
+}
+
+#whyus .card:nth-child(n + 2) p {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 200;
+  color: #ababab;
+}
+
+#whyus .card:first-child {
+  padding: 3.5rem 2rem 3.5rem 0;
+  border-radius: 0;
+}
+
+#services {
+  padding: 10rem 0;
+}
+
+#services .ss-table {
+  width: 50rem;
+}
+
+footer .hero {
+  background-color: #191818;
 }

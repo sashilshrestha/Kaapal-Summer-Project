@@ -4,6 +4,119 @@
 html {
 }
 
-.logo-img {
-    height: 4rem;
+header {
+    .logo-img {
+        height: 4rem;
+    }
+}
+
+#hero {
+    .hero {
+        height: calc(100vh - 15rem);
+
+        .hero-overlay {
+            background: rgb(33, 33, 33);
+            background: linear-gradient(
+                180deg,
+                rgba(33, 33, 33, 1) 0%,
+                rgba(33, 33, 33, 0.45602030812324934) 50%,
+                rgba(33, 33, 33, 1) 100%
+            );
+
+            &.part-2 {
+                background: rgb(33, 33, 33);
+                background: linear-gradient(
+                    90deg,
+                    rgba(33, 33, 33, 1) 0%,
+                    rgba(33, 33, 33, 0.8) 25%,
+                    rgba(33, 33, 33, 0) 100%
+                );
+            }
+        }
+
+        .hero-info {
+            .ss-information {
+                // max-width: 50%;
+                h5 {
+                    font-size: 1.8rem;
+                    color: rgb(172, 172, 172);
+                    padding: 0 0.3rem;
+                }
+
+                h1 {
+                    max-width: 60rem;
+                    font-size: 6.75rem;
+                    line-height: 100%;
+                }
+            }
+        }
+    }
+}
+
+#whyus {
+    padding: 10rem 0;
+    .card {
+        width: 100%;
+        padding: 3.5rem 2rem;
+        border-radius: 6rem 6rem 6rem 0rem;
+        margin: 0 1.5rem;
+
+        h5 {
+            letter-spacing: 1px;
+        }
+        h2 {
+            line-height: 150%;
+        }
+
+        p {
+            &.text-base {
+                font-size: 1.2rem;
+                line-height: 150%;
+            }
+        }
+
+        .ss-img-holder {
+            margin-bottom: 4rem;
+
+            img {
+                width: 6.5rem;
+                height: 6.5rem;
+                object-fit: cover;
+            }
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+
+        &:nth-child(n + 2) {
+            background-color: #191818;
+
+            p {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+                font-weight: 200;
+                color: #ababab;
+            }
+        }
+
+        &:first-child {
+            padding: 3.5rem 2rem 3.5rem 0;
+            border-radius: 0;
+        }
+    }
+}
+
+#services {
+    padding: 10rem 0;
+
+    .ss-table {
+        width: 50rem;
+    }
+}
+
+footer {
+    .hero {
+        background-color: #191818;
+    }
 }

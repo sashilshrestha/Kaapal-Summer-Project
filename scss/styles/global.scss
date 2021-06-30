@@ -4,3 +4,8 @@ a {
 
 body {
 }
+
+.modal-toggle:checked ~ .modal,
+.modal:target {
+    background: #d87f1914;
+}
