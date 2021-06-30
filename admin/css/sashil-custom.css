@@ -1,0 +1,39 @@
+.ss-outerrow {
+    height: 100vh;
+}
+
+.ss-form-container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.ss-logo-bhado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.bg-kaapal {
+    background-color: #ec1d26;
+    color: #fff;
+    transition: all 0.1s ease-in;
+}
+.bg-kaapal:hover {
+    background-color: #fa5d65;
+    color: #fff;
+}
+
+.ss-profile-img {
+    height: 12rem;
+    width: 12rem;
+    object-fit: contain;
+    border-radius: 50%;
+    backdrop-filter: sepia(90%);
+}
+
+.bg-kp {
+    background-color: #1a1a1a;
+}

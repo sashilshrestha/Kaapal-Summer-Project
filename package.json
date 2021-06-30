@@ -1,0 +1,20 @@
+{
+    "name": "summer-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "tailwind build -i css/tailwind.css -o css/main.css",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^10.2.6",
+        "postcss": "^8.3.5",
+        "tailwindcss": "^2.2.4"
+    },
+    "dependencies": {
+        "daisyui": "^1.6.0"
+    }
+}
