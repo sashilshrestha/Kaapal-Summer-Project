@@ -1,4 +1,4 @@
-<?php include('./head.php'); ?>
+<?php include('head.php'); ?>
 <!-- Navbar -->
 <header>
     <div class="navbar mb-2 text-neutral-content ">
@@ -10,13 +10,13 @@
             </div>
             <div class="px-2 mx-2">
                 <div class="items-stretch hidden lg:flex">
-                    <a class="btn btn-ghost btn-sm rounded-btn">
+                    <a class="btn btn-ghost btn-sm rounded-btn" href="/Summer">
                         Home
                     </a>
                     <a class="btn btn-ghost btn-sm rounded-btn" href="./about.php">
                         About
                     </a>
-                    <a class="btn btn-ghost btn-sm rounded-btn">
+                    <a class="btn btn-ghost btn-sm rounded-btn" href="./services.php">
                         Services
                     </a>
                     <a class="btn btn-ghost btn-sm rounded-btn">

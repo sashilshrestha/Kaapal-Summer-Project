@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
             <div class="overlay-2"></div>
             <div class="container mx-auto pb-12">
                 <div class="ss-header">
-                    <h1 class="font-extrabold text-6xl">About Us</h1>
+                    <h1 class="font-extrabold text-6xl">Our Services</h1>
                 </div>
                 <div class="text-sm breadcrumbs text-gray-300 text-lg">
                     <ul class="">
@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
                             <a class="">Home</a>
                         </li>
                         <li>
-                            <a class="">About</a>
+                            <a class="">Services</a>
                         </li>
 
                     </ul>

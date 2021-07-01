@@ -27,7 +27,8 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<?php include('includes/head.php'); ?>
+<?php //include('includes/head.php'); 
+?>
 <?php include('includes/header.php'); ?>
 
 
