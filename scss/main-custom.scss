@@ -177,3 +177,81 @@ footer {
         padding: 10rem 0;
     }
 }
+
+#contact-page {
+    #about-header {
+        .about-hero {
+            height: calc(100vh - 35rem);
+            // filter: grayscale(1);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('https://images.unsplash.com/photo-1583784561126-c18e59057f3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80');
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            position: relative;
+
+            .overlay {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgb(33, 33, 33);
+                background: linear-gradient(
+                    180deg,
+                    rgba(33, 33, 33, 1) 0%,
+                    rgba(33, 33, 33, 0.65602030812324934) 50%,
+                    rgba(33, 33, 33, 1) 100%
+                );
+            }
+            .overlay-2 {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgb(33, 33, 33);
+                background: linear-gradient(
+                    90deg,
+                    rgba(33, 33, 33, 1) 0%,
+                    rgba(33, 33, 33, 0.8) 25%,
+                    rgba(33, 33, 33, 0) 100%
+                );
+            }
+            .ss-header {
+                z-index: 10;
+                position: relative;
+            }
+            .breadcrumbs {
+                z-index: 10;
+                position: relative;
+            }
+        }
+    }
+    #contact-info {
+        padding: 10rem 0;
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .icon-holder {
+                width: 10rem;
+                height: 10rem;
+                border-radius: 50%;
+                background-color: #191818;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 0 1rem;
+
+                svg {
+                    width: 3rem;
+                    height: 3rem;
+                    object-fit: cover;
+                    fill: white;
+                }
+            }
+        }
+    }
+}

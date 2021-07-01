@@ -67,7 +67,7 @@ if (isset($_POST['submit'])) {
             </div>
             <div class="card p-3 shadow-2xl">
                 <div class="ss-img-holder flex justify-end">
-                    <img src="https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80" alt="" class="rounded-full">
+                    <img src="https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80" alt="" class="rounded-full ring ring-primary ring-offset-base-100 ring-offset-8">
                 </div>
                 <h1 class="font-bold text-primary">BEAUTY <span class="font-light text-white">CENTER</span></h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
@@ -75,7 +75,7 @@ if (isset($_POST['submit'])) {
 
             <div class="card p-3 shadow-2xl">
                 <div class="ss-img-holder flex justify-end">
-                    <img src="https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80" alt="" class="rounded-full">
+                    <img src="https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80" alt="" class="rounded-full ring ring-primary ring-offset-base-100 ring-offset-8">
                 </div>
                 <h1 class="font-bold text-primary">BEAUTY <span class="font-light text-white">CENTER</span></h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
@@ -83,7 +83,7 @@ if (isset($_POST['submit'])) {
 
             <div class="card p-3 shadow-2xl ">
                 <div class="ss-img-holder flex justify-end">
-                    <img src="https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80" alt="" class="rounded-full">
+                    <img src="https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80" alt="" class="rounded-full ring ring-primary ring-offset-base-100 ring-offset-8">
                 </div>
                 <h1 class="font-bold text-primary">BEAUTY <span class="font-light text-white">CENTER</span></h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
@@ -152,7 +152,8 @@ if (isset($_POST['submit'])) {
 
     </div>
 </section>
-<?php include('includes/footer.php'); ?>
+
+<?php //include('includes/footer.php'); ?>
 
 <!-- Book Appoinment Modal Box -->
 <div id="my-modal" class="modal">

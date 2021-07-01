@@ -14,3 +14,7 @@
 .card {
     @apply hover:shadow-none transition-all duration-300 ease-linear cursor-pointer;
 }
+
+#contact-info .card {
+    @apply ring ring-white ring-offset-base-100 ring-offset-8;
+}

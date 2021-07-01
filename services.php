@@ -55,21 +55,63 @@ if (isset($_POST['submit'])) {
         </div>
     </section>
 
-    <section id="about-info">
-        <div class="container mx-auto">
-            <div class="flex-col flex lg:flex-row">
-                <img src="https://images.unsplash.com/photo-1457972729786-0411a3b2b626?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="shadow-4xl w-1/3 grayscale">
-                <div class="py-5 pl-20">
-                    <h1 class="mb-5 text-5xl font-bold">
-                        <span class="text-primary">Kaapal</span> Unisex Salon
+    <section id="services">
+        <div class="mx-auto ss-table">
+            <h5 class="text-center font-light text-lg tracking-widest uppercase">Beauty Services</h5>
+            <h1 class="text-center font-bold text-6xl"><span class="text-primary">Service</span> Prices</h1>
+            <p class="mt-7 text-center text-2xl text-gray-500">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+            <div class="overflow-x-auto mt-12 mt-20">
+                <table class="table w-full">
+                    <thead>
+                        <tr>
+                            <th>
+                                Sno.
+                            </th>
+                            <th>Service Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $query = mysqli_query($con, "select * from tblservices");
+                        $i = 1;
+                        while ($row = mysqli_fetch_array($query)) {
+                        ?>
+                            <tr>
+                                <th>
+                                    #<?php echo $i; ?>
+                                </th>
+                                <td>
+                                    <div class="flex items-center space-x-3">
+                                        <div>
+                                            <div class="font-bold">
+                                                <?php echo $row['ServiceName']; ?>
+                                            </div>
 
-                    </h1>
-                    <p class="mb-5 text-2xl leading-10 text-gray-300">
-                        Our main focus is on quality and hygiene. Our Parlour is well equipped with advanced technology equipments and provides best quality services. Our staff is well trained and experienced, offering advanced services in Skin, Hair and Body Shaping that will provide you with a luxurious experience that leave you feeling relaxed and stress free. The specialities in the parlour are, apart from regular bleachings and Facials, many types of hairstyles, Bridal and cine make-up and different types of Facials & fashion hair colourings..
-                    </p>
+                                        </div>
+                                    </div>
+                                </td>
 
-                </div>
+                                <th>
+                                    <p class="inline-block border-white border-b-2">Rs. <?php echo $row['Cost']; ?></p>
+                                </th>
+                            </tr>
+                        <?php
+                            $i++;
+                        }
+                        ?>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>SNO.</th>
+                            <th>Service Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
+
+
         </div>
     </section>
 </main>

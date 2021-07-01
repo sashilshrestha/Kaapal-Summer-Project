@@ -19,7 +19,7 @@
                     <a class="btn btn-ghost btn-sm rounded-btn" href="./services.php">
                         Services
                     </a>
-                    <a class="btn btn-ghost btn-sm rounded-btn">
+                    <a class="btn btn-ghost btn-sm rounded-btn" href="./contact.php">
                         Contact
                     </a>
                     <a class="btn btn-primary btn-sm rounded-btn" href="#my-modal">

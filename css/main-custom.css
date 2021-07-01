@@ -197,3 +197,72 @@ footer .hero {
 #about-page #about-info {
   padding: 10rem 0;
 }
+
+#contact-page #about-header .about-hero {
+  height: calc(100vh - 35rem);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://images.unsplash.com/photo-1583784561126-c18e59057f3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80");
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: relative;
+}
+
+#contact-page #about-header .about-hero .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #212121;
+  background: linear-gradient(180deg, #212121 0%, rgba(33, 33, 33, 0.65602) 50%, #212121 100%);
+}
+
+#contact-page #about-header .about-hero .overlay-2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #212121;
+  background: linear-gradient(90deg, #212121 0%, rgba(33, 33, 33, 0.8) 25%, rgba(33, 33, 33, 0) 100%);
+}
+
+#contact-page #about-header .about-hero .ss-header {
+  z-index: 10;
+  position: relative;
+}
+
+#contact-page #about-header .about-hero .breadcrumbs {
+  z-index: 10;
+  position: relative;
+}
+
+#contact-page #contact-info {
+  padding: 10rem 0;
+}
+
+#contact-page #contact-info .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-page #contact-info .card .icon-holder {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: #191818;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 1rem;
+}
+
+#contact-page #contact-info .card .icon-holder svg {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  fill: white;
+}
