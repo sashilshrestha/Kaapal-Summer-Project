@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
 
     <section id="contact-info">
         <div class="container mx-auto">
-            <div class="flex flex-row w-full justify-center">
+            <div class="flex flex-row w-full justify-evenly">
                 <div class="card p-3 text-center ">
                     <div class="icon-holder shadow-xl">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 463 463" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 463 463">
@@ -80,7 +80,7 @@ if (isset($_POST['submit'])) {
                             <metadata>
                                 Created by potrace 1.15, written by Peter Selinger 2001-2017
                             </metadata>
-                            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#fff" stroke="none">
+                            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" stroke="none">
                                 <path d="M3045 12782 c-27 -10 -230 -122 -450 -248 -220 -127 -506 -291 -635
                                         -364 -301 -171 -350 -219 -382 -374 -23 -106 -15 -124 273 -615 480 -820 1464
                                         -2453 1505 -2500 54 -59 132 -106 213 -127 113 -28 117 -27 650 279 262 151
@@ -115,7 +115,7 @@ if (isset($_POST['submit'])) {
                             <metadata>
                                 Created by potrace 1.15, written by Peter Selinger 2001-2017
                             </metadata>
-                            <g transform="translate(0.000000,821.000000) scale(0.100000,-0.100000)" fill="#fff" stroke="none">
+                            <g transform="translate(0.000000,821.000000) scale(0.100000,-0.100000)" stroke="none">
                                 <path d="M615 8204 c-129 -27 -208 -67 -284 -143 -31 -31 -72 -83 -90 -114
                                         -17 -30 -59 -83 -92 -118 -72 -73 -122 -170 -138 -267 -8 -48 -11 -1050 -9
                                         -3612 3 -3474 3 -3546 22 -3595 63 -162 179 -276 336 -331 54 -19 184 -19
@@ -149,7 +149,7 @@ if (isset($_POST['submit'])) {
                             <metadata>
                                 Created by potrace 1.15, written by Peter Selinger 2001-2017
                             </metadata>
-                            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#fff" stroke="none">
+                            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" stroke="none">
                                 <path d="M6015 12413 c-462 -30 -960 -122 -1404 -259 -1166 -362 -2215 -1090
                                             -2969 -2061 -655 -845 -1073 -1843 -1211 -2893 -41 -316 -46 -398 -46 -805 0
                                             -416 7 -524 56 -870 128 -902 487 -1811 1014 -2565 390 -557 888 -1062 1430

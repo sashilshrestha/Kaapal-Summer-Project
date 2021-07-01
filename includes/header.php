@@ -33,3 +33,34 @@
 </header>
 
 <body>
+    
+    <!-- Book Appoinment Modal Box -->
+    <div id="my-modal" class="modal">
+        <div class="modal-box">
+            <div class="form-control">
+                <h1 class="text-center font-bold mb-5 text-4xl">Book an Appointment</h1>
+                <input type="text" placeholder="Full Name" class="input input-bordered mb-3">
+                <input type="text" placeholder="Email" class="input input-bordered mb-3">
+                <select class="select select-bordered w-full mb-3">
+                    <option disabled="disabled" selected="selected">Choose your superpower</option>
+                    <option>telekinesis</option>
+                    <option>time travel</option>
+                    <option>invisibility</option>
+                </select>
+                <?php
+                $year =  date('Y');
+                $month =  date('m');
+                $date = date('d');
+                ?>
+                <input type="date" placeholder="Date" class="input input-bordered mb-3" value="<?php echo $year ?>-<?php echo $month ?>-<?php echo $date ?>" min="<?php echo $year ?>-<?php echo $month ?>-<?php echo $date ?>" max="">
+                <input type="time" placeholder="Time" class="input input-bordered mb-3" value="10:00" min="10:00" max="18:00">
+                <input type="number" placeholder="Phone Number" class="input input-bordered mb-3">
+
+            </div>
+
+            <div class="modal-action">
+                <a href="#" class="btn btn-primary px-8 text-base">Book</a>
+                <a href="#" class="btn btn-ghost btn-outline px-8 text-base">Close</a>
+            </div>
+        </div>
+    </div>

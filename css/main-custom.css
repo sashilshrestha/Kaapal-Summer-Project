@@ -257,12 +257,12 @@ footer .hero {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 1rem;
+  margin: 0 0 2rem;
 }
 
 #contact-page #contact-info .card .icon-holder svg {
   width: 3rem;
   height: 3rem;
   object-fit: cover;
-  fill: white;
+  fill: #e73e41;
 }

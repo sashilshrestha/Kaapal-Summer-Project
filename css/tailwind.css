@@ -15,6 +15,6 @@
     @apply hover:shadow-none transition-all duration-300 ease-linear cursor-pointer;
 }
 
-#contact-info .card {
-    @apply ring ring-white ring-offset-base-100 ring-offset-8;
+#contact-info .card .icon-holder {
+    @apply ring ring-primary ring-offset-base-100 ring-offset-8;
 }
