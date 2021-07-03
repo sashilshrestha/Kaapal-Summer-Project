@@ -15,17 +15,19 @@ if (strlen($_SESSION['bpmsaid'] == 0)) {
     {
         $query = mysqli_query($con, "delete from  tblservices where ID='$eid'");
         if ($query) {
+            header('location:manage-services.php');
             $msg = "Deleted";
         } else {
+            header('location:manage-services.php');
             $msg = "";
         }
-        if ($msg) {
-            echo "<script>alert('Service has been deleted.');</script>";
-            echo "<script>window.location.href = 'manage-services.php'</script>";
-        } else {
-            echo "<script>alert('Error Occured.');</script>";
-            echo "<script>window.location.href = 'manage-services.php'</script>";
-        }
+        // if ($msg) {
+        //     echo "<script>alert('Service has been deleted.');</script>";
+        //     echo "<script>window.location.href = 'manage-services.php'</script>";
+        // } else {
+        //     echo "<script>alert('Error Occured.');</script>";
+        //     echo "<script>window.location.href = 'manage-services.php'</script>";
+        // }
     }
 
     del($con, $eid);

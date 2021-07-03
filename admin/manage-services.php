@@ -71,7 +71,7 @@ if (strlen($_SESSION['bpmsaid'] == 0)) {
                                                 <td><?php echo $row['ServiceName']; ?></td>
                                                 <td><?php echo $row['Cost']; ?></td>
                                                 <td><?php echo $row['CreationDate']; ?></td>
-                                                <td><a href="edit-services.php?editid=<?php echo $row['ID']; ?>">Edit</a> <a href="delete-services.php?delid=<?php echo $row['ID']; ?>" class="ml-4">Delete <?php echo $id; ?></a></td>
+                                                <td><a href="edit-services.php?editid=<?php echo $row['ID']; ?>" class="btn btn-success a-btn-slide-text">Edit</a> <a href="delete-services.php?delid=<?php echo $row['ID']; ?>" class="ml-1 btn btn-primary a-btn-slide-text">Delete <?php echo $id; ?></a></td>
 
                                             </tr>
                                         <?php
@@ -90,7 +90,7 @@ if (strlen($_SESSION['bpmsaid'] == 0)) {
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class=" sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Your Website 2020</span>
