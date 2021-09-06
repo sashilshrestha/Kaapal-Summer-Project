@@ -1,13 +1,13 @@
-<?php  
-        if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
-            $url = "https://";   
-        else  
-            $url = "http://";   
-        // Append the host(domain name, ip) to the URL.   
-        $url.= $_SERVER['HTTP_HOST'];   
-        
-        // Append the requested resource location to the URL   
-        $url.= $_SERVER['REQUEST_URI'];    
+<?php
+if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+    $url = "https://";
+else
+    $url = "http://";
+// Append the host(domain name, ip) to the URL.   
+$url .= $_SERVER['HTTP_HOST'];
+
+// Append the requested resource location to the URL   
+$url .= $_SERVER['REQUEST_URI'];
 ?>
 
 <!-- Sidebar -->
@@ -39,8 +39,7 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-            aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-cog"></i>
             <span>Services</span>
         </a>
@@ -55,16 +54,15 @@
 
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-            aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Pages</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <!-- <h6 class="collapse-header">Custom Utilities:</h6> -->
-                <a class="collapse-item" href="utilities-color.html">About Us</a>
-                <a class="collapse-item" href="utilities-border.html">Contact Us</a>
+                <a class="collapse-item" href="./about-us.php">About Us</a>
+                <!-- <a class="collapse-item" href="utilities-border.html">Contact Us</a> -->
             </div>
         </div>
     </li>
@@ -77,8 +75,7 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
-            aria-controls="collapsePages">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-calendar-check"></i>
             <span>Appointments</span>
         </a>
@@ -99,8 +96,7 @@
 
     <!-- Nav Item - Customers Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustomer"
-            aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustomer" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-users"></i>
             <span>Customers</span>
         </a>
