@@ -35,9 +35,14 @@ if (isset($_POST['login'])) {
                                     <img src="./img/Logo-1.png" alt="">
                                 </div>
                                 <form class="user" method="post" action="">
-
                                     <div class="form-group">
-                                        <input type="text" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username" required>
+                                        <input type="text" name="fullname" class="form-control form-control-user" id="exampleInputEmail" placeholder="Full Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="number" class="form-control form-control-user" id="exampleInputEmail" placeholder="Mobile Number" required>
                                     </div>
                                     <div class="form-group">
                                         <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" required>
@@ -48,16 +53,11 @@ if (isset($_POST['login'])) {
                                         }  ?>
                                     </p>
 
-                                    <!-- <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                        Login
-                                    </a> -->
-                                    <input type="submit" name="login" value="Sign In" class="btn bg-kaapal btn-user btn-block">
+
+                                    <input type="submit" name="login" value="Sign Up" class="btn bg-kaapal btn-user btn-block">
 
                                 </form>
                                 <hr>
-                                <div class="text-center">
-                                    <a class="small" href="forgot-password.html">Forgot Password ?</a>
-                                </div>
                                 <div class="text-center">
                                     <a class="small" href="../index.php">
                                         Redirect to <i class="fas fa-home"></i> Home Page </a>

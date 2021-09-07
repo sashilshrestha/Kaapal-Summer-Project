@@ -1,3 +1,74 @@
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+
+require_once 'phpmailer/Exception.php';
+require_once 'phpmailer/PHPMailer.php';
+require_once 'phpmailer/SMTP.php';
+
+session_start();
+include('dbconnection.php');
+error_reporting(0);
+
+if (isset($_POST['submit'])) {
+
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $services = $_POST['services'];
+    $adate = $_POST['adate'];
+    $atime = $_POST['atime'];
+    $phone = $_POST['phone'];
+    $aptnumber = mt_rand(100000000, 999999999);
+
+    $query = mysqli_query($con, "insert into tblappointment(AptNumber,Name,Email,PhoneNumber,AptDate,AptTime,Services) value('$aptnumber','$name','$email','$phone','$adate','$atime','$services')");
+
+    if ($query) {
+        $mail = new PHPMailer(true);
+        try {
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'utsab.pokharel3@gmail.com'; // Gmail address which you want to use as SMTP server
+            $mail->Password = 'Blindspot123456'; // Gmail address Password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = '587';
+
+            $mail->setFrom('utsab.pokharel3@gmail.com', 'Glamup Unisex Salon'); // Gmail address which you used as SMTP server
+            $mail->addAddress($email); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
+
+            $mail->isHTML(true);
+            $mail->Subject = 'Appointment Submission Notification';
+            $mail->Body = "Dear $name,<br><br>
+    
+                This is the automated message from Glamup Unisex Salon. You will be receiving another email following your appointment status.<br><br>
+    
+                Thank you !<br><br>
+                
+                Appointment Information: <br><br>
+                Appointment Number: $aptnumber<br>
+                Created Date: <br>
+                Name: $name<br>
+                Email: $email<br>
+                Mobile Number: $phone<br>
+                Appointment Date: $adate<br>
+                Appointment Time: $atime<br>
+                Services:<br>
+    
+                Glamup Unisex Salon<br>
+                Anamnagar, Kathmandu<br>
+                9840594474";
+
+            $mail->send();
+
+            echo '<script>alert("Done")</script>';
+        } catch (Exception $e) {
+            echo '<script>alert("NotDone")</script>';
+        }
+    } else {
+        $msg = "Something Went Wrong. Please try again";
+    }
+}
+?>
 <?php include('head.php'); ?>
 <!-- Navbar -->
 <header>
@@ -26,7 +97,7 @@
                         Appointment
                     </a>
                     <a class="btn btn-primary btn-sm rounded-btn" href="./admin">
-                        Admin
+                        Sign In
                     </a>
                 </div>
             </div>
@@ -36,34 +107,10 @@
 </header>
 
 <body>
-
     <!-- Book Appoinment Modal Box -->
-    <?php
-    if (isset($_POST['submit'])) {
-
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $services = $_POST['services'];
-        $adate = $_POST['adate'];
-        $atime = $_POST['atime'];
-        $phone = $_POST['phone'];
-        $aptnumber = mt_rand(100000000, 999999999);
-
-        $query = mysqli_query($con, "insert into tblappointment(AptNumber,Name,Email,PhoneNumber,AptDate,AptTime,Services) value('$aptnumber','$name','$email','$phone','$adate','$atime','$services')");
-
-        if ($query) {
-            $ret = mysqli_query($con, "select AptNumber from tblappointment where Email='$email' and  PhoneNumber='$phone'");
-            $result = mysqli_fetch_array($ret);
-            $_SESSION['aptno'] = $result['AptNumber'];
-            echo "<script>window.location.href='thank-you.php'</script>";
-        } else {
-            $msg = "Something Went Wrong. Please try again";
-        }
-    }
-    ?>
     <div id="my-modal" class="modal">
         <div class="modal-box">
-            <form action="#" method="post" class="appointment-form">
+            <form method="POST" action="#">
                 <div class="form-control">
                     <h1 class="text-center font-bold mb-5 text-4xl">Book an Appointment</h1>
                     <input type="text" placeholder="Full Name" class="input input-bordered mb-3" name="name">
@@ -90,7 +137,7 @@
 
                 <div class="modal-action">
                     <input type="submit" name="submit" id="submit" value="Send" class="btn btn-primary px-8 text-base">
-                    <a href="#" class="btn btn-ghost btn-outline px-8 text-base">Close</a>
+                    <a href="#" class="btn btn-ghost btn-outline px-8 text-base">Closed </a>
                 </div>
             </form>
         </div>
