@@ -24,14 +24,13 @@ if (strlen($_SESSION['bpmsaid'] == 0)) {
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Rejected Appointments
-                    </h1>
+                    <h1 class="h3 mb-2 text-gray-800">Invoice List</h1>
 
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Rejected Appoinments</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Invoice List</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -39,30 +38,18 @@ if (strlen($_SESSION['bpmsaid'] == 0)) {
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Appointment Number</th>
-                                            <th>Name</th>
-                                            <th>Mobile Number</th>
-                                            <th>Appointment Date</th>
-                                            <th>Appointment Time</th>
+                                            <th>Invoice ID</th>
+                                            <th>Customer Name</th>
+                                            <th>Invoice Date</th>
                                             <th>Action</th>
 
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Appointment Number</th>
-                                            <th>Name</th>
-                                            <th>Mobile Number</th>
-                                            <th>Appointment Date</th>
-                                            <th>Appointment Time</th>
-                                            <th>Action</th>
 
-                                        </tr>
-                                    </tfoot>
                                     <tbody>
                                         <?php
-                                        $ret = mysqli_query($con, "select *from  tblappointment where Status='2'");
+                                        $ret = mysqli_query($con, "select distinct tblcustomers.Name,tblinvoice.BillingId,tblinvoice.PostingDate from  tblcustomers   
+                                        join tblinvoice on tblcustomers.ID=tblinvoice.Userid  order by tblinvoice.ID desc");
                                         $cnt = 1;
                                         while ($row = mysqli_fetch_array($ret)) {
                                         ?>
@@ -70,12 +57,11 @@ if (strlen($_SESSION['bpmsaid'] == 0)) {
                                                 <td>
                                                     <?php echo $cnt; ?>
                                                 </td>
-                                                <td><?php echo $row['AptNumber']; ?></td>
+                                                <td><?php echo $row['BillingId']; ?></td>
                                                 <td><?php echo $row['Name']; ?></td>
-                                                <td><?php echo $row['PhoneNumber']; ?></td>
-                                                <td><?php echo $row['AptDate']; ?></td>
-                                                <td><?php echo $row['AptTime']; ?></td>
-                                                <td><a class="pr-2" href="view-appoinment.php?viewid=<?php echo $row['ID']; ?>">View</a>|<a href="delete-appointment.php?deleteid=<?php echo $row['ID']; ?>" class="text-danger"><i class="fas fa-trash pl-2"></i></a></td>
+                                                <td><?php echo $row['PostingDate']; ?></td>
+                                                <td>Edit | <a href="add-customer-services.php?addid=<?php echo $row['ID']; ?>">Assign Service</a>
+                                                </td>
 
                                             </tr>
                                         <?php

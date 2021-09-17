@@ -37,3 +37,20 @@
 .bg-kp {
     background-color: #1a1a1a;
 }
+
+.view-btn {
+    background: #4e73df;
+    color: white;
+    border-radius: 5px;
+    padding: 0.2rem 0.6rem;
+    margin-right: 0.6rem;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid transparent;
+}
+
+.view-btn:hover {
+    text-decoration: none;
+    background: white;
+    color: #4e73df;
+    border: 2px solid #4e73df;
+}

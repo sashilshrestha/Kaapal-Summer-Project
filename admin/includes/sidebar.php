@@ -125,19 +125,19 @@ $url .= $_SERVER['REQUEST_URI'];
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo $url; ?>">
+        <a class="nav-link" href="./invoices.php">
             <i class="fas fa-file-invoice"></i>
             <span>Invoices</span></a>
     </li>
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo $url; ?>">
+        <a class="nav-link" href="./search-appointment.php">
             <i class="fas fa-calendar-check"></i>
             <span>Search Appointment</span></a>
     </li>
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo $url; ?>">
+        <a class="nav-link" href="./search-invoice.php">
             <i class="far fa-flag"></i>
             <span>Search Invoice</span></a>
     </li>

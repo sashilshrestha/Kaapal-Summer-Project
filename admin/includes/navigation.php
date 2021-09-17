@@ -44,7 +44,7 @@
                 <?php if ($num > 0) {
                     while ($result = mysqli_fetch_array($ret1)) {
                 ?>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <a class="dropdown-item d-flex align-items-center" href="view-appoinment.php?viewid=<?php echo $result['ID']; ?>">
                             <div>
                                 <div class="small text-gray-500"><?php echo $result['ApplyDate']; ?></div>
                                 <span class="font-weight-bold">New appointment received from <span class="text-warning"><?php echo $result['Name']; ?>

@@ -75,7 +75,7 @@ if (strlen($_SESSION['bpmsaid'] == 0)) {
                                                 <td><?php echo $row['PhoneNumber']; ?></td>
                                                 <td><?php echo $row['AptDate']; ?></td>
                                                 <td><?php echo $row['AptTime']; ?></td>
-                                                <td><a href="view-appoinment.php?viewid=<?php echo $row['ID']; ?>">View</a></td>
+                                                <td><a href="view-appoinment.php?viewid=<?php echo $row['ID']; ?>" class="pr-2">View</a>|<a href="delete-appointment.php?deleteid=<?php echo $row['ID']; ?>" class="text-danger"><i class="fas fa-trash pl-2"></i></a></td>
 
                                             </tr>
                                         <?php

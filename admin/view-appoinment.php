@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+use PHPMailer\PHPMailer\PHPMailer;
+
+require_once '../includes/phpmailer/Exception.php';
+require_once '../includes/phpmailer/PHPMailer.php';
+require_once '../includes/phpmailer/SMTP.php';
+
+
 error_reporting(0);
 include('includes/dbconnection.php');
 
@@ -14,9 +22,82 @@ if (strlen($_SESSION['bpmsaid'] == 0)) {
 
 
 
+        $ret = mysqli_query($con, "select * from tblappointment where ID='$cid'");
+        $cnt = 1;
+        while ($row = mysqli_fetch_array($ret)) {
+            $Email = $row['Email'];
+        }
+
         $query = mysqli_query($con, "update  tblappointment set Remark='$remark',Status='$status' where ID='$cid'");
         if ($query) {
             $msg = "All remark has been updated.";
+
+            if ($status == '1') {
+                $mail = new PHPMailer(true);
+                $alert = '';
+                try {
+                    $mail->isSMTP();
+                    $mail->Host = 'smtp.gmail.com';
+                    $mail->SMTPAuth = true;
+                    $mail->Username = 'utsab.pokharel3@gmail.com'; // Gmail address which you want to use as SMTP server
+                    $mail->Password = 'Blindspot123456'; // Gmail address Password
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                    $mail->Port = '587';
+
+                    $mail->setFrom('utsab.pokharel3@gmail.com', 'Glamup Unisex Salon'); // Gmail address which you used as SMTP server
+                    $mail->addAddress($Email); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
+
+                    $mail->isHTML(true);
+                    $mail->Subject = 'Appointment Confirmed Notification';
+                    $mail->Body = "Hi,<br><br>
+
+                    
+                    Thank you!<br>
+                    Glamup Unisex Salon<br>
+                    Anamnagar, Kathmandu<br>
+                    9840594474";
+
+                    $mail->send();
+                    $alert = '<div class="alert-success">
+                    <span>Message Sent! Thank you for contacting us.</span>
+                    </div>';
+                } catch (Exception $e) {
+                    $alert = '<div class="alert-error">
+                    <span>' . $e->getMessage() . '</span>
+                    </div>';
+                }
+            } else if ($status == '2') {
+                $mail = new PHPMailer(true);
+                $alert = '';
+                try {
+                    $mail->isSMTP();
+                    $mail->Host = 'smtp.gmail.com';
+                    $mail->SMTPAuth = true;
+                    $mail->Username = 'utsab.pokharel3@gmail.com'; // Gmail address which you want to use as SMTP server
+                    $mail->Password = 'Blindspot123456'; // Gmail address Password
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                    $mail->Port = '587';
+
+                    $mail->setFrom('utsab.pokharel3@gmail.com', 'Glamup Unisex Salon'); // Gmail address which you used as SMTP server
+                    $mail->addAddress($Email); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
+
+                    $mail->isHTML(true);
+                    $mail->Subject = 'Appointment Rejected Notification';
+                    $mail->Body = "Hi,<br><br>
+
+                    
+                    Appinment is rejected";
+
+                    $mail->send();
+                    $alert = '<div class="alert-success">
+                    <span>Message Sent! Thank you for contacting us.</span>
+                    </div>';
+                } catch (Exception $e) {
+                    $alert = '<div class="alert-error">
+                    <span>' . $e->getMessage() . '</span>
+                    </div>';
+                }
+            }
         } else {
             $msg = "Something Went Wrong. Please try again";
         }

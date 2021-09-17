@@ -19,6 +19,10 @@ if (isset($_POST['submit'])) {
     $atime = $_POST['atime'];
     $phone = $_POST['phone'];
     $aptnumber = mt_rand(100000000, 999999999);
+    $datetime = new DateTime();
+    $Nepal_time = new DateTimeZone('Asia/Kathmandu');
+    $datetime->setTimezone($Nepal_time);
+    $currenttime = $datetime->format('Y-m-d h:i:sa');
 
     $query = mysqli_query($con, "insert into tblappointment(AptNumber,Name,Email,PhoneNumber,AptDate,AptTime,Services) value('$aptnumber','$name','$email','$phone','$adate','$atime','$services')");
 
@@ -28,12 +32,12 @@ if (isset($_POST['submit'])) {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'utsab.pokharel3@gmail.com'; // Gmail address which you want to use as SMTP server
-            $mail->Password = 'Blindspot123456'; // Gmail address Password
+            $mail->Username = 'shresthasashil@gmail.com'; // Gmail address which you want to use as SMTP server
+            $mail->Password = '9813863950'; // Gmail address Password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = '587';
 
-            $mail->setFrom('utsab.pokharel3@gmail.com', 'Glamup Unisex Salon'); // Gmail address which you used as SMTP server
+            $mail->setFrom('shresthasashil@gmail.com', 'Kaapal Unisex Salon'); // Gmail address which you used as SMTP server
             $mail->addAddress($email); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
 
             $mail->isHTML(true);
