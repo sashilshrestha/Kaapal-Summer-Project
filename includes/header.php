@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
                 Services:<br>
     
                 Glamup Unisex Salon<br>
-                Anamnagar, Kathmandu<br>
+                Naxal, Kathmandu<br>
                 9840594474";
 
             $mail->send();

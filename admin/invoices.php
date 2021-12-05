@@ -60,7 +60,7 @@ if (strlen($_SESSION['bpmsaid'] == 0)) {
                                                 <td><?php echo $row['BillingId']; ?></td>
                                                 <td><?php echo $row['Name']; ?></td>
                                                 <td><?php echo $row['PostingDate']; ?></td>
-                                                <td>Edit | <a href="add-customer-services.php?addid=<?php echo $row['ID']; ?>">Assign Service</a>
+                                                <td><a href="view-invoice.php?invoiceid=<?php echo $row['BillingId']; ?>" class="view-btn">View</a>
                                                 </td>
 
                                             </tr>
